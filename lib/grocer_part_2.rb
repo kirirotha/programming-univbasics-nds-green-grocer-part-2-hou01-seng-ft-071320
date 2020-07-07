@@ -59,7 +59,7 @@ def checkout(cart, coupons)
     item_total_price = final_items[:count] * final_items[:price]
     puts item_total_price
     total_price = total_price + item_total_price
-    puts item_total_price
+    puts total_price
   end
 end
 unconsolidated_cart = [
