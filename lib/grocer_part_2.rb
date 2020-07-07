@@ -17,7 +17,7 @@ def apply_coupons(cart, coupons)
       end  
     end  
   end
-  return new_cart
+  puts new_cart
 end
 
 def apply_clearance(cart)
@@ -42,7 +42,10 @@ cart = [
   {:item => "AVOCADO", :price => 3.00, :clearance => true, :count => 2},
   {:item => "KALE",    :price => 3.00, :clearance => false, :count => 1}]
 coupon = [
-  {:item => "AVOCADO", :num => 2, :cost => 5.00}
+  {:item => "AVOCADO", :num => 2, :cost => 5.00},
+  {:item => "KALE",    :num => 1, :cost => 1.22}
+  
+  
   ]
 
 apply_coupons(cart, coupon)
