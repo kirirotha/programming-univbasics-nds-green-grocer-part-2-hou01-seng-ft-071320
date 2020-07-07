@@ -48,6 +48,7 @@ def checkout(cart, coupons)
   applied_coupons_to_cart = apply_coupons(consolidated_cart, coupons)
   final_cart = apply_clearance(applied_coupons_to_cart)
   puts consolidated_cart
+  puts applied_coupons_to_cart
   puts final_cart
 end
 unconsolidated_cart = [
