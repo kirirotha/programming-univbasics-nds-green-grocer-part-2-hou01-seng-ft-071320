@@ -16,9 +16,10 @@ def apply_coupons(cart, coupons)
         new_cart << discounted_item
         puts discounted_item
         puts cart 
-      end
-    else
-      new_cart << cart_item
+      
+      else
+        new_cart << cart_item
+      end  
     end  
   end
   puts new_cart
