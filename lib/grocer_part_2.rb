@@ -68,6 +68,6 @@ coupon = [
 #consolidate_cart(unconsolidated_cart)
 #apply_coupons(cart, coupon)
 #apply_clearance(cart)
-checkout(cart, coupon)
+checkout(unconsolidated_cart, coupon)
 
 
