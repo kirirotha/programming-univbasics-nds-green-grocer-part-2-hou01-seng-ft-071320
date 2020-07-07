@@ -44,23 +44,15 @@ def checkout(cart, coupons)
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
-  #puts cart
   consolidated_cart = consolidate_cart(cart)
-  #puts cart
-  puts consolidated_cart
   applied_coupons_to_cart = apply_coupons(consolidated_cart, coupons)
-  #puts cart
-  puts applied_coupons_to_cart
   final_cart = apply_clearance(applied_coupons_to_cart)
-  #puts cart
-  puts final_cart
   total_price = 0
   final_cart.each do |final_items|
     item_total_price = final_items[:count] * final_items[:price]
-    puts item_total_price
     total_price = total_price + item_total_price
-    puts total_price
   end
+  puts total_price
 end
 unconsolidated_cart = [
   {:item => "AVOCADO", :price => 3.00, :clearance => true, :count => 2},
