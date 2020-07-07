@@ -14,9 +14,9 @@ def apply_coupons(cart, coupons)
         discounted_item_name = cart_item[:item] + ' W/COUPON'
         discounted_price = coupon_item[:cost] / coupon_item[:num]
         discounted_item = {:item => cart_item[:item] + ' W/COUPON', :price => discounted_price, :clearence => true, :count => coupon_item[:num]}
-        if cart_item[:count] > 0
-          new_cart << cart_item
-        end  
+        #if cart_item[:count] > 0
+          #new_cart << cart_item
+        #end  
         new_cart << discounted_item
         #puts discounted_item
         #puts cart 
