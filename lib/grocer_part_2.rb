@@ -13,10 +13,8 @@ def apply_coupons(cart, coupons)
         #puts cart_item
         discounted_price = coupon_item[:cost] / coupon_item[:num]
         discounted_item = {:item => cart_item[:item] + ' W/COUPON', :price => discounted_price, :clearence => true, :count => coupon_item[:num]}
-        puts cart
-        if cart_item[:count] = 0
-          new_cart.delete_if {cart_item[:count]= 0}
-        end  
+        #puts cart
+        new_cart.delete_if {cart_item[:count]= 0}
         new_cart << discounted_item
         #puts discounted_item
         #puts cart 
