@@ -47,7 +47,7 @@ def checkout(cart, coupons)
 end
 
 cart = [
-  {:item => "AVOCADO", :price => 3.00, :clearance => true, :count => 3},
+  {:item => "AVOCADO", :price => 3.00, :clearance => true, :count => 2},
   {:item => "KALE",    :price => 3.00, :clearance => false, :count => 1}]
 coupon = [
   {:item => "AVOCADO", :num => 2, :cost => 5.00}
