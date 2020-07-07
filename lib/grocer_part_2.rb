@@ -11,8 +11,9 @@ def apply_coupons(cart, coupons)
         #puts cart_item
         cart_item[:count] = cart_item[:count] - coupon_item[:num]
         #puts cart_item
+        discounted_item_name = cart_item[:item] + " W/COUPON"
         discounted_price = coupon_item[:cost] / coupon_item[:num]
-        discounted_item = {:item => cart_item[:item], :price => discounted_price, :clearence => true, :count => coupon_item[:num]}
+        discounted_item = {:item => discounted_item_name, :price => discounted_price, :clearence => true, :count => coupon_item[:num]}
         new_cart << cart_item
         new_cart << discounted_item
         #puts discounted_item
