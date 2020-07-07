@@ -52,7 +52,7 @@ def checkout(cart, coupons)
     item_total_price = final_items[:count] * final_items[:price]
     total_price = total_price + item_total_price
   end
-  puts total_price
+  return total_price
 end
 unconsolidated_cart = [
   {:item => "AVOCADO", :price => 3.00, :clearance => true, :count => 2},
