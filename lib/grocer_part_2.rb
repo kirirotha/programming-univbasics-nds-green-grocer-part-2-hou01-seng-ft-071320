@@ -5,7 +5,7 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   new_cart=cart
-  coupons.each do |coupon_item|
+  cart.each do |coupon_item|
     cart.each do |cart_item|
       if cart_item[:item] == coupon_item[:item]
         #puts cart_item
@@ -19,7 +19,7 @@ def apply_coupons(cart, coupons)
         #puts discounted_item
         #puts cart 
       
-      else
+      
       end  
     end  
   end
