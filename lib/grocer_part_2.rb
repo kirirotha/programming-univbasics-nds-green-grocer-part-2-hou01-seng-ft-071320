@@ -17,7 +17,7 @@ def apply_coupons(cart, coupons)
       end  
     end  
   end
-  puts new_cart
+  return new_cart
 end
 
 def apply_clearance(cart)
