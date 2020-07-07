@@ -31,7 +31,7 @@ def apply_clearance(cart)
     end
     new_cart << cart_item
   end
-  puts new_cart
+  return new_cart
 end
 
 def checkout(cart, coupons)
