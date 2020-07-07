@@ -46,7 +46,8 @@ def checkout(cart, coupons)
   # some irritated customers
   consolidate_cart(cart)
   apply_coupons(cart, coupons)
-  puts apply_clearance(cart)
+  final_cart = apply_clearance(cart)
+  puts final_cart
 end
 
 cart = [
