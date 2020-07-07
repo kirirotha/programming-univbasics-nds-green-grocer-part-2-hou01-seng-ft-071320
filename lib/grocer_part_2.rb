@@ -4,7 +4,7 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  
+  new_cart=[]
   coupons.each do |coupon_item|
     cart.each do |cart_item|
       if cart_item[:item] == coupon_item[:item]
@@ -13,13 +13,15 @@ def apply_coupons(cart, coupons)
         #puts cart_item
         discounted_price = coupon_item[:cost] / coupon_item[:num]
         discounted_item = {:item => cart_item[:item], :price => discounted_price, :clearence => true, :count => coupon_item[:num]}
-        #cart << discounted_item
+        new_cart << discounted_item
         puts discounted_item
         puts cart 
       end
+    else
+      new_cart << cart_item
     end  
   end
-  puts cart
+  puts new_cart
 end
 
 def apply_clearance(cart)
