@@ -4,7 +4,7 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  new_cart=[]
+  new_cart=cart
   coupons.each do |coupon_item|
     cart.each do |cart_item|
       if cart_item[:item] == coupon_item[:item]
@@ -22,7 +22,6 @@ def apply_coupons(cart, coupons)
         #puts cart 
       
       else
-        new_cart << cart_item
       end  
     end  
   end
